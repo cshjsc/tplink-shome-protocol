@@ -1,6 +1,6 @@
 # TP Link home protocol for rust
-
 Simple library to easily communicate with a tp link smart device.
+
 Made possible by this [article](https://www.softscheck.com/en/reverse-engineering-tp-link-hs110/#TP-Link%20Smart%20Home%20Protocol).
 
 ## Usage
