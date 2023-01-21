@@ -1,11 +1,12 @@
 [package]
 name = "tplink-shome-protocol"
 description = "Simple library to easily communicate with a tp link smart device."
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 keywords = ["smarthome", "tplink", "tp-link", "kasa"]
 categories = ["network-programming"]
+repository = "https://github.com/cshjsc/tplink-shome-protocol"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
