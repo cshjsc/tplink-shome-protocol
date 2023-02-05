@@ -1,7 +1,7 @@
 [package]
 name = "tplink-shome-protocol"
 description = "Simple library to easily communicate with a tp link smart device."
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 keywords = ["smarthome", "tplink", "tp-link", "kasa"]
