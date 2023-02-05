@@ -37,7 +37,6 @@ pub fn decrypt(encrypted: &[u8]) -> Vec<u8> {
         .map(|e| {
             let res = e ^ encryption_key;
             encryption_key = *e;
-            //println!("encryption key : {encryption_key}");
             res
         })
         .collect()
@@ -71,7 +70,6 @@ pub fn receive_message(mut stream: &TcpStream) -> io::Result<String> {
         Ok(v) => v,
         Err(e) => panic!("Invalid UTF-8 sequence: {}", e),
     };
-    println!("String: {}", s);
     Ok(s.to_string())
 }
 
