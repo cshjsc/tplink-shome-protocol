@@ -66,11 +66,13 @@ pub fn receive_message(mut stream: &TcpStream) -> io::Result<String> {
     let mut buffer: Vec<u8> = vec![0; num as usize];
     stream.read_exact(&mut buffer)?;
     let decrypted = decrypt(&buffer);
-    let s = match std::str::from_utf8(&decrypted) {
-        Ok(v) => v,
-        Err(e) => panic!("Invalid UTF-8 sequence: {}", e),
-    };
-    Ok(s.to_string())
+    match std::str::from_utf8(&decrypted) {
+        Ok(v) => Ok(v.to_string()),
+        Err(e) => Err(io::Error::new(
+            io::ErrorKind::InvalidData,
+            format!("received message is invalid {e}"),
+        )),
+    }
 }
 
 ///
